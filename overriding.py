@@ -2,7 +2,7 @@
 # Overriding
 
 class Employee:
-    def setNumberOfWorkingHours(self):  # the word set in front, makes the overriding technique plausible
+    def setNumberOfWorkingHours(self):  # the word set in front, sets the overriding technique plausible
         self.numberOfWorkingHours = 40
 
     def displayNumberOfWokringHours(self):
@@ -11,6 +11,9 @@ class Employee:
 class Trainee(Employee):
     def setNumberOfWorkingHours(self):
         self.numberOfWorkingHours = 45
+     
+    def resetNumberOfWorkingHours(self):
+        super().numberOfWorkingHours() # reset method -- super function to override. 
 
 
 employee = Employee()
